@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Quick Links Launcher",
+    "version": "1.0",
+    "description": "Quick access to your favorite sites.",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "storage"
+    ]
+}
