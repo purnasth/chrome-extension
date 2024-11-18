@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Font Changer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            width: auto;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .font-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .font-btn {
+            flex: 1 1 calc(33.333% - 10px);
+            padding: 8px;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .font-btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        .tag-checkboxes {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag-checkboxes label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Font Changer</h3>
+    <input type="text" id="searchFont" placeholder="Search Fonts..." />
+    <select id="categorySelect">
+        <option value="all">All</option>
+        <option value="sans-serif">Sans Serif</option>
+        <option value="serif">Serif</option>
+        <option value="script">Script</option>
+    </select>
+
+    <div id="fontOptions" class="font-options">
+        <!-- Fonts will be dynamically loaded -->
+    </div>
+
+    <h4>Select Tags</h4>
+    <div class="tag-checkboxes">
+        <label><input type="checkbox" value="h1" class="tag-checkbox" /> H1</label>
+        <label><input type="checkbox" value="h2" class="tag-checkbox" /> H2</label>
+        <label><input type="checkbox" value="h3" class="tag-checkbox" /> H3</label>
+        <label><input type="checkbox" value="p" class="tag-checkbox" /> Paragraph</label>
+        <label><input type="checkbox" value="span" class="tag-checkbox" /> Span</label>
+        <label><input type="checkbox" value="div" class="tag-checkbox" /> Div</label>
+    </div>
+
+    <button id="resetFont">Reset Font</button>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
